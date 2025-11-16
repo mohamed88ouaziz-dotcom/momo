@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YASSHOP12 - Catalogo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Homepage -->
+    <div id="homepage" class="page active">
+        <div class="homepage-content">
+            <div class="brand-text-container">
+                <img src="YASSHOP12.png" alt="YASSHOP12" class="brand-text" loading="eager" decoding="async" fetchpriority="high">
+            </div>
+            
+            <div class="shark-container">
+                <div class="shark-image">
+                    <img src="image 1.png" alt="Shark" class="shark-img" loading="eager" decoding="async" fetchpriority="high">
+                </div>
+            </div>
+            
+            <button class="catalog-btn" onclick="showCatalog()">
+                CATALOGO
+            </button>
+        </div>
+    </div>
+
+    <!-- Catalog Page -->  
+    <div id="catalog" class="page">
+        <!-- Header -->
+        <header class="catalog-header">
+            <div class="header-left">
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="header-center">
+                <div class="catalog-logo">
+                    <img src="logo.png" alt="YASSHOP12 Logo" class="header-logo" loading="eager" decoding="async" fetchpriority="high">
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <a href="https://www.instagram.com/yasshopp12?igsh=MWxuZzR6eTBua25pOA==" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav id="navigation-menu" class="navigation-menu">
+            <ul>
+                <li><a href="#" onclick="showHomepage()">Home</a></li>
+                <li><a href="#" onclick="showCategory('giacche')">Giacche</a></li>
+                <li><a href="#" onclick="showCategory('estivo')">Vestiti Estivi</a></li>
+                <li><a href="#" onclick="showCategory('invernale')">Invernale</a></li>
+                <li><a href="#" onclick="showCategory('scarpe')">Scarpe</a></li>
+                <li><a href="#" onclick="showCategory('accessori')">Accessori</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="catalog-main">
+            <!-- How it Works Section -->
+            <section class="how-it-works">
+                <h2>Come Funziona?</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <p>Scegli l'articolo</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-share"></i>
+                        </div>
+                        <p>Invia su WhatsApp/Instagram</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <p>Ricevi a casa</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Categories -->
+            <section class="product-categories">
+                <div class="category-card" onclick="showCategory('giacche')">
+                    <div class="category-image">
+                        <img src="WhatsApp Image 2025-04-13 at 02.22.07 (2) 1.png" alt="Giacche" class="category-img" loading="lazy">
+                    </div>
+                    <h3>GIACCHE</h3>
+                    <button class="explore-btn">ESPLORA</button>
+                </div>
+                
+                <div class="category-card" onclick="showCategory('estivo')">
+                    <div class="category-image">
+                        <img src="WhatsApp Image 2025-04-13 at 02.22.07 1.png" alt="Estivo" class="category-img" loading="lazy">
+                    </div>
+                    <h3>ESTIVO</h3>
+                    <button class="explore-btn">ESPLORA</button>
+                </div>
+                
+                <div class="category-card" onclick="showCategory('invernale')">
+                    <div class="category-image">
+                        <img src="WhatsApp Image 2025-04-13 at 02.22.08 2.png" alt="Invernale" class="category-img" loading="lazy">
+                    </div>
+                    <h3>INVERNALE</h3>
+                    <button class="explore-btn">ESPLORA</button>
+                </div>
+                
+                <div class="category-card" onclick="showCategory('scarpe')">
+                    <div class="category-image">
+                        <img src="WhatsApp Image 2025-04-13 at 02.22.07 (1) 2.png" alt="Scarpe" class="category-img" loading="lazy">
+                    </div>
+                    <h3>SCARPE</h3>
+                    <button class="explore-btn">ESPLORA</button>
+                </div>
+                
+                <div class="category-card" onclick="showCategory('accessori')">
+                    <div class="category-image">
+                        <img src="WhatsApp Image 2025-04-13 at 02.22.08 (1) 1.png" alt="Accessori" class="category-img" loading="lazy">
+                    </div>
+                    <h3>ACCESSORI</h3>
+                    <button class="explore-btn">ESPLORA</button>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="reviews">
+                <div class="reviews-container">
+                    <div class="reviews-header">
+                        <h2>Le Nostre Recensioni</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-carousel">
+                        <div class="carousel-container">
+                            <div class="review-image active">
+                                <img src="photo_5922439587274280910_y.jpg" alt="Recensione 1" class="review-img" loading="lazy">
+                            </div>
+                            
+                            <div class="review-image">
+                                <img src="photo_5922439587274280911_y.jpg" alt="Recensione 2" class="review-img" loading="lazy">
+                            </div>
+                            
+                            <div class="review-image">
+                                <img src="photo_5922439587274280912_y.jpg" alt="Recensione 3" class="review-img" loading="lazy">
+                            </div>
+                            
+                            <div class="review-image">
+                                <img src="photo_5922439587274280913_y.jpg" alt="Recensione 4" class="review-img" loading="lazy">
+                            </div>
+                            
+                            <div class="review-image">
+                                <img src="photo_5922439587274280914_y.jpg" alt="Recensione 5" class="review-img" loading="lazy">
+                            </div>
+                            
+                            <div class="review-image">
+                                <img src="photo_5922439587274280915_y.jpg" alt="Recensione 6" class="review-img" loading="lazy">
+                            </div>
+                            
+                            <div class="review-image">
+                                <img src="photo_5922439587274280916_y.jpg" alt="Recensione 7" class="review-img" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Accessori Page -->
+    <div id="accessori-page" class="page">
+        <header class="catalog-header">
+            <div class="header-left">
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="header-center">
+                <div class="catalog-logo">
+                    <img src="logo.png" alt="YASSHOP12 Logo" class="header-logo" loading="eager" decoding="async" fetchpriority="high">
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <a href="https://www.instagram.com/yasshopp12?igsh=MWxuZzR6eTBua25pOA==" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav id="navigation-menu" class="navigation-menu">
+            <ul>
+                <li><a href="#" onclick="showHomepage()">Home</a></li>
+                <li><a href="#" onclick="showCategory('giacche')">Giacche</a></li>
+                <li><a href="#" onclick="showCategory('estivo')">Vestiti Estivi</a></li>
+                <li><a href="#" onclick="showCategory('invernale')">Invernale</a></li>
+                <li><a href="#" onclick="showCategory('scarpe')">Scarpe</a></li>
+                <li><a href="#" onclick="showCategory('accessori')">Accessori</a></li>
+            </ul>
+        </nav>
+
+        <main class="catalog-main">
+            
+            <!-- Product Categories -->
+            <section class="product-categories">
+                <div class="category-card" onclick="showAccessoriCategory('cappelli')">
+                    <div class="category-image">
+                        <img src="cappelli.jpeg" alt="Cappelli" class="category-img" loading="lazy">
+                    </div>
+                    <h3>CAPPELLI</h3>
+                    <button class="explore-btn">ESPLORA</button>
+                </div>
+                
+                <div class="category-card" onclick="showAccessoriCategory('cinture')">
+                    <div class="category-image">
+                        <img src="cinture.jpeg" alt="Cinture" class="category-img" loading="lazy">
+                    </div>
+                    <h3>CINTURE</h3>
+                    <button class="explore-btn">ESPLORA</button>
+                </div>
+                
+                <div class="category-card" onclick="showAccessoriCategory('ciabatte-uomo')">
+                    <div class="category-image">
+                        <img src="ciabatte-uomo.jpeg" alt="Ciabatte Uomo" class="category-img" loading="lazy">
+                    </div>
+                    <h3>CIABATTE UOMO</h3>
+                    <button class="explore-btn">ESPLORA</button>
+                </div>
+                
+                <div class="category-card" onclick="showAccessoriCategory('ciabatte-donna')">
+                    <div class="category-image">
+                        <img src="ciabatte-donna.jpeg" alt="Ciabatte Donna" class="category-img" loading="lazy">
+                    </div>
+                    <h3>CIABATTE DONNA</h3>
+                    <button class="explore-btn">ESPLORA</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Category Page -->
+    <div id="category-page" class="page">
+        <header class="catalog-header">
+            <div class="header-left">
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="header-center">
+                <div class="catalog-logo">
+                    <img src="logo.png" alt="YASSHOP12 Logo" class="header-logo" loading="eager" decoding="async" fetchpriority="high">
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <a href="https://www.instagram.com/yasshopp12?igsh=MWxuZzR6eTBua25pOA==" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav id="navigation-menu" class="navigation-menu">
+            <ul>
+                <li><a href="#" onclick="showHomepage()">Home</a></li>
+                <li><a href="#" onclick="showCategory('giacche')">Giacche</a></li>
+                <li><a href="#" onclick="showCategory('estivo')">Vestiti Estivi</a></li>
+                <li><a href="#" onclick="showCategory('invernale')">Invernale</a></li>
+                <li><a href="#" onclick="showCategory('scarpe')">Scarpe</a></li>
+                <li><a href="#" onclick="showCategory('accessori')">Accessori</a></li>
+            </ul>
+        </nav>
+
+            <main class="category-main">
+                <div class="category-header">
+                <div class="category-title-wrapper">
+                    <div class="category-title-row">
+                        <h1 id="category-title">GIACCHE</h1>
+                        <div class="search-bar-wrapper">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="category-search" class="search-input" placeholder="Cerca l'articolo che desideri" oninput="filterProducts(this.value)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="products-grid" class="products-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Product Page -->
+    <div id="product-page" class="page">
+        <header class="catalog-header">
+            <div class="header-left">
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="header-center">
+                <div class="catalog-logo">
+                    <img src="logo.png" alt="YASSHOP12 Logo" class="header-logo" loading="eager" decoding="async" fetchpriority="high">
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <a href="https://www.instagram.com/yasshopp12?igsh=MWxuZzR6eTBua25pOA==" target="_blank" class="social-link instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav id="navigation-menu" class="navigation-menu">
+            <ul>
+                <li><a href="#" onclick="showHomepage()">Home</a></li>
+                <li><a href="#" onclick="showCategory('giacche')">Giacche</a></li>
+                <li><a href="#" onclick="showCategory('estivo')">Vestiti Estivi</a></li>
+                <li><a href="#" onclick="showCategory('invernale')">Invernale</a></li>
+                <li><a href="#" onclick="showCategory('scarpe')">Scarpe</a></li>
+                <li><a href="#" onclick="showCategory('accessori')">Accessori</a></li>
+            </ul>
+        </nav>
+
+        <main class="product-main">
+            
+            <div class="product-gallery">
+                <div class="main-image">
+                    <div class="product-image-placeholder"><img src="./YASSHOP12.png" alt="Immagine prodotto"></div>
+                </div>
+                <div class="thumbnail-images">
+                    <div class="thumbnail active">
+                        <div class="product-image-placeholder"><img src="./YASSHOP12.png" alt="Thumbnail 1"></div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="product-image-placeholder"><img src="./YASSHOP12.png" alt="Thumbnail 2"></div>
+                    </div>
+                    <div class="thumbnail">
+                        <div class="product-image-placeholder"><img src="./YASSHOP12.png" alt="Thumbnail 3"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <div class="product-details">
+                    <h1 id="product-title">Moncler Puffer</h1>
+                    <p id="product-description">
+                        Piumino Moncler dal design iconico, leggero ma estremamente caldo. 
+                        Realizzato con materiali di alta qualità, offre comfort e stile inconfondibile. 
+                        Perfetto per le stagioni fredde, con dettagli esclusivi e finiture di lusso 
+                        che rappresentano l'eleganza del brand.
+                    </p>
+  
+
+                    
+                    <div class="size-selection">
+                        <h3>Taglie Disponibili</h3>
+                        <select id="size-selector">
+                            <option value="">Scegliere un opzione</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="product-features">
+                    <h3>Dettagli</h3>
+                    <ul>
+                        <li><i class="fas fa-snowflake"></i> Protezione termica</li>
+                        <li><i class="fas fa-feather"></i> Imbottitura premium</li>
+                        <li><i class="fas fa-tshirt"></i> Comfort quotidiano</li>
+                        <li><i class="fas fa-shield-alt"></i> Resistente all'acqua</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
